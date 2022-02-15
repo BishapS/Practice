@@ -604,6 +604,8 @@ opacity: 0.5;
   background-color: #ccc;
 }
 .panel {
+  width: 590px;
+  height: fit-content;
   padding: 0 18px;
   background-color: white;
   display: none;
@@ -695,6 +697,7 @@ opacity: 0.5;
   height: 200px;
   background-color: #0D4128;
   margin-top:100px;
+  margin-right: 20px;
 }
 .elp{
   position: relative;
