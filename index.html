@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style> @font-face {font-family: icon;src: url(./fonts/icon.ttf);}</style>
+    <script src="./script/photos.js"></script>
+    <script src="./libs/jquery-3.6.0.js"></script>
+    <script src="./libs/jquery.maskedinput.min.js"></script>
+    <script src="./script/review.js"></script>
+</head>
+<body>
+    <header id="header" class="header"> 
+        <div class="container">
+            <div class="nav">
+                   <a href="#"> <img src="./img/svg/wezom_logo.svg" class="logo" alt="Wezom"></a>
+                   <ul class="menu">
+                       <li>
+                           <a href="#" class="comp">О Компании</a>
+                       </li>
+                       <li>
+                        <img src="./img/svg/Ellipse.svg" alt="eclipse">
+                       </li>
+                        <li>
+                           <a href="#">Доставка и оплата</a>
+                       </li>
+                       <li>
+                        <img src="./img/svg/Ellipse.svg" alt="eclipse">
+                       </li>
+                        <li>
+                           <a href="#">Гарантия</a>
+                       </li>
+                       <li>
+                        <a href="tel:+380680000000" class="tel">+38 068 000 00 00</a>
+                       </li>
+                        <li>
+                           <a href="#">Ua</a>
+                       </li>
+                        <li>
+                        <img src="./img/svg/Ellipse.svg" alt="eclipse" class="ecl">
+                       </li>
+                        <li>
+                           <a href="#" class="ru">Ru</a>
+                       </li>
+                       <li>
+                           <a href="#">Войти</a>
+                       </li>
+                       <li>
+                        <icon class="icon icon-user"></icon>
+                       </li>
+                   </ul>
+            </div>
+            <div class="bot">
+            <div class="dropmenu" onclick="document.querySelector('.dropmenu_list').classList.toggle('active');">
+            <img src="./img/svg/Vector.svg" alt="vector"> каталог
+            <span>Все категории</span>
+            <div class="dropmenu_list">
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/1pow.svg" alt="">Категория 1 <icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/cartridge2.svg" alt="">Категория 2<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/geometry3.svg" alt="">Категория 3<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/aktuator4.svg" alt="">Категория 4<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/servoprivod5.svg" alt="">Категория 5<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/prokladki6.svg" alt="">Категория 6<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/zap4asti7.svg" alt="">Категория 7<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/aktuator8.svg" alt="">Категория 8<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/body-tourbine9.svg" alt="">Категория 9<icon class="icon icon-Path"></icon></a></div>
+                <div class="dropmenuitem"><a href="#"><img src="./img/svg/zap4asti10.svg" alt="">Категория 10<icon class="icon icon-Path"></icon></a></div>
+            </div>
+            </div>
+                <form action="" method="get">
+                    <input  placeholder="Поиск, например 'тест'" type="text">
+                    <button type="submit" class="search"></button>
+                </form>
+                <div class="shopmenu">
+                <div class="btm">
+                   <div class="btm_item"><icon class="icon icon-balance"></icon> </div>
+                   <div class="btm_item"><icon class="icon icon-heart"></icon> </div>
+                   <div class="btm_item" data-id="3" count="3" onclick="document.querySelector('.shopmenu_list').classList.toggle('active');document.querySelector('.btm_item[data-id=&quot;3&quot;]').classList.toggle('active');"><icon class="icon icon-shopping-cart"></icon></div>
+                </div>
+                <div class="shopmenu_list">
+                    <div class="korz">
+                        В корзине <span class="bold">3 товара</span>
+                    </div>
+                    <div class="korz">
+                        На сумму <span class="bold">30 000 ₴</span>
+                    </div>
+                    <div class="b"><span>Оформить заказ</span><icon class="icon icon-shopping-cart"></icon></div>
+                    <a href="" class="ed"><span>Редактировать заказ</span></a>
+                </div>    
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <div class="grad">
+            <div class="white">
+                <div class="container">
+                  <div class="bd">
+                    <div class="bdleft">
+                     <div class="low">
+                      Test — Каталог — Группа — Тестовый товар для верстки
+                     </div>
+                     <div id="pictures">
+                        <div id="mpics">
+                            <div class="mpic active" data-id="1" onclick="glr(1)"><img src="./img/item1.jpg" alt="pic1"></div>
+                            <div class="mpic" data-id="2" onclick="glr(2)"><img src="./img/item2.jpg" alt="pic2"></div>
+                            <div class="mpic" data-id="3" onclick="glr(3)"><img src="./img/item3.jpg" alt="pic3"></div>
+                            <div class="mpic" data-id="4" onclick="glr(4)"><img src="./img/item4.jpg" alt="pic4"></div>
+                        </div>
+                        <div class="bpic"><img src="./img/item1.jpg" alt="pic1"></div>
+                     </div>
+                     <div class="characteristics">
+                         <div class="specifications">
+                             <div class="specs"> 
+                               <span id="chblck"> Характеристики </span> <span id="chgr">Тестового товара для верстки</span>
+                             </div>
+                             <div class="allchars">
+                                 <div class="allchl">
+                                     <div class="tip">Тип</div>
+                                     <div class="num">Номер</div>
+                                     <div class="brand">Бренд</div>
+                                     <div class="allch"><span>Все характеристики</span><icon class="icon icon-Path"></icon></div>
+                                 </div>
+                                 <div class="allchr">
+                                     <div class="grp">Группа 1</div>
+                                     <div class="numb">8410-210</div>
+                                     <div class="wez">Wezom</div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                    </div>
+                    <div class="bdright">
+                        <div class="rate">
+                            <icon class="icon icon-check-mark"></icon>
+                            <span class="n">В наличии</span>
+                            <icon class="icon icon-Star"></icon>
+                            <icon class="icon icon-Star"></icon>
+                            <icon class="icon icon-Star"></icon>
+                            <icon class="icon icon-Star"></icon>
+                            <icon class="icon icon-Star"></icon>
+                            <span class="dig">12</span>
+                            <span class="artic">Артикул: 100500</span>
+                        </div>
+                        <div class="prom">
+                            <div class="acz">
+                                <span>Акция</span>
+                            </div>
+                            <div class="jul">
+                                    <span>До 30 июля скидка — 20% на все тестовые товары</span>
+                            </div>
+                        </div>
+                        <div class="grvn">
+                            <span class="grvnr">3 799₴</span>
+                            <span class="grvncr">4 200₴</span>
+                        </div>
+                        <div class="buy">
+                            <div class="basket">
+                                <span>В корзину</span>
+                                <icon class="icon icon-shopping-cart"></icon>
+                            </div>
+                            <div class="rect">
+                                <div class="buy_item" id="blnc"><icon class="icon icon-balance"></icon> </div>
+                                <div class="buy_item" id="heart"><icon class="icon icon-heart"></icon> </div>
+                                <div class="buy_item" id="call"><icon class="icon icon-call"></icon>
+                                    <div class="byit"> <span>Купить в</span></div> 
+                                    <div class="byit"><span>1 Клик</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="accordion" id="but1">
+                            <div><icon class="icon icon-shield"></icon>
+                            <stan>Гарантия</stan>
+                            <icon class="icon icon-Path2" id="pth2"></icon>
+                            </div>
+                        </button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                          </div>
+                        <button class="accordion">
+                            <div><icon class="icon icon-check"></icon>
+                                <stan>Условия доставки</stan>
+                                <icon class="icon icon-Path2" id="pth2"></icon>
+                            </div>
+                        </button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                          </div>
+                        <button class="accordion">
+                            <div><icon class="icon icon-credit-card"></icon>
+                                <stan>Условия оплаты</stan>
+                                <icon class="icon icon-Path2" id="pth2"></icon>
+                            </div>
+                        </button>
+                          <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                          </div>
+                          <div class="reviews">
+                              <div class="rev">
+                                  <span id="rew">Отзывы покупателей</span> <span id="revnum">12</span>
+                              </div>
+                              <div class="wrapper-boxes">
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="otz">
+                                        <span>Иванова Карина  </span> /   21 мая 2021 
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <icon class="icon icon-Star"></icon>
+                                        <div class="ot">Покупка этой товара была спонтанной и незапланированной. В течении часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и единственный нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных я ставила пергамент, но мыть все равно сложновато.</div>
+                                    </div>
+                                </div>
+                                </div>
+                                <button>Показать ещё</button>
+                          </div>    
+                     </div>
+                    </div>
+                    <div class="help">
+                        <div class="elp">Нужна помощь в подборе товара? Мы перезваниваем!</div>
+                        <div class="helpmask">
+                            <input id="phone"placeholder="+38(0__)__-__-___" type="text"> 
+                            <div class="otpr"><span>Отправить</span></div>
+                        </div>
+
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="foot">
+                <span>2021 © Wezom Test</span>
+                <span id="test">Тестовое \\ Wezom</span>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i; 
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+    $(function(){$("#phone").mask("+38(099)99-99-999");});
+   </script>
+</html>
