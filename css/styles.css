@@ -724,7 +724,7 @@ opacity: 0.5;
   position: relative;
   left: 427px;
   top: 50px;
-  border: 4px solid white;
+  border: 3px solid white;
   font-size: 24px;
   color: white;
   text-align: center;
@@ -759,6 +759,7 @@ opacity: 0.5;
   position: relative;
 }
 .otz{
+  margin-top: 10px;
   font-size:  16px;
   color: #5C6D7D;
 }
@@ -773,7 +774,7 @@ opacity: 0.5;
 .box {
   position: relative;
   width: 559px;
-  height: 189px;
+  height: 159px;
 }
 
 .reviews button {
